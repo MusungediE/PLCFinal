@@ -1,3 +1,23 @@
+'''
+s--> 'GO' <stmt> 
+<stmt> --> <switch>|<loop>|<block>|<var>
+<block> --> '{' <stmt> ';' '}'
+<switch> --> 'SW' <boolexpr> <block> ['BJ'<block>]
+<loop> --> 'LP' <boolexpr> <block>
+<var> --> 'id' (<type>|<assign>)
+<type> --> 'byte1'|'byte2'|'byte4'|'byte8'
+<assign> --> '=' <expr>
+<expr> --> <term> {('*'|'/'|'%') <term>}
+<term> --> <factor> {('+'|'-') <factor>}
+<factor> --> 'id'|'int_lit'|'(' <expr> ')'
+<boolexpr> --> <bor>{'AND' <bor>}
+<bor> --> <beq> {'OR' <beq>}
+<beq> --> <brel> {('!='|'==') <brel>}
+<brel> --> <bexpr> {('<='|'>='|'>'|'<') <bexpr>}
+<bexpr> --> <bterm> {('*'|'/'|'%') <bterm>}
+<bterm> --> <bfactor> {('+'|'-') <bfactor>}
+<bfactor> --> 'id'|'int_lit'|'bool_lit'
+'''
 import re
 #regex for variable declaration
 def isVariable(str):
