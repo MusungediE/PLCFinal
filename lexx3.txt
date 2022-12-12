@@ -1,0 +1,15 @@
+GO
+LGLGLG byte ; 
+OPOPOP byte ;
+LGLGLG = 95; 
+OPOPOP = 34 ;
+LLP (LGLGLG < OPOPOP)  {
+    LGLGLG LGLGLG * 761 ;
+}
+SSW ( LGLGLG == OPOPOP ) {
+    LGLGLG = 85 ;
+}
+BJJ {
+    LGLGLGG = 32  
+}
+STOP
